@@ -12,7 +12,7 @@ GrabClip(){                                                                    ;
   Global APP                                                                   ;  Make APP var accessible
   CLP:=Clipboard                                                               ;  Copy clipboard to CLP
   EXE:="ahk_exe 4KVD.exe"                                                      ;  4KVD app name
-  If (RegExMatch(CLP,"https:\/\/www.youtube.com\/(watch\?v=|shorts\/)")){      ;  Clipboard contains YT link?
+  If (RegExMatch(CLP,"https:\/\/www.youtube.com\/(watch\?v=|shorts\/)")=1){    ;  Clipboard contains YT link at pos 1?
     HTM:=GrabPage(CLP)                                                         ;    Download the YT html page
     RegExMatch(HTM,"<meta name=""title"" content=""([^""]+)"">",TT)            ;    Grab the title from the html
     RegExMatch(HTM,"ownerChannelName"":""([^""]+)",OC)                         ;    Ditto for the channel name
@@ -23,7 +23,7 @@ GrabClip(){                                                                    ;
     Else                                                                       ;    Otherwise
       Run % APP                                                                ;      Run it
     WinWaitActive % EXE                                                        ;    Wait until it's active
-;### Need to check for 'Continue?' window if closed prematurely! ###           ;    To do!
+;##### Need to check for 'Continue?' window if closed prematurely! #####       ;    To do!
     MouseGetPos mx,my                                                          ;    Get current mouse position
     WinGetPos wx,wy,,,% EXE                                                    ;    Get 4KVD window position
     MouseClick L,wx+42,wy+73,,0                                                ;    Click the Paste button
