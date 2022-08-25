@@ -52,7 +52,7 @@ ClipName(TT1:="",OC1:=""){                                                     ;
     Else                                                                       ;    Otherwise
       TMP:="",CTR:=0                                                           ;      Clear list and time count
   }                                                                            ;  End loop check
-  ToolTip % TTL.Count()?TTL.Count() " files in " CTR "s.`n`n" TMP:"",10,800,20 ;  Show a ToolTip of what's downloading
+;  ToolTip % TTL.Count()?TTL.Count() " files in " CTR "s.`n`n" TMP:"",10,800,20 ;  Show a ToolTip of what's downloading
   SetTimer % A_ThisFunc,% TTL.Count()?-1000:"Off"                              ;  Restart/Stop the timer if anything left
 }                                                                              ;End function block
 
