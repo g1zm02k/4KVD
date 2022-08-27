@@ -6,4 +6,10 @@ It was written in a hurry and is by no means perfect. It's just for personal use
 
 Requires [AutoHotkey](https://www.autohotkey.com/)
 
-Note: *While this will download Shorts it won't prefix the channel for them as it just downloads a login page and I've neither the time nor the incination to make that work for some 60s fluff.*
+Fixes for 1.4:
+
+* Big rewrite to catch YT links anywhere on the clipboard.
+* Now catches multiple links in one clip.
+* Skips duplicates that are currently downloading.
+* Catches YouTu.be links.
+* Now renames Shorts too.
