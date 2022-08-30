@@ -6,6 +6,12 @@ It was written in a hurry and is by no means perfect. It's just for personal use
 
 Requires [AutoHotkey](https://www.autohotkey.com/)
 
+Fixes for 1.5:
+
+* What I thought I'd fixed in 1.4
+* Fixed an continually added empty array every second.
+* Increased download check time to 2s (as a double check for fix above). 
+
 Fixes for 1.4:
 
 * Big rewrite to catch YT links anywhere on the clipboard.
